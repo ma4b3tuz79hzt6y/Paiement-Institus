@@ -1,7 +1,30 @@
 # Paiement-Institus
+📢 **Message aux Participants - Initiation au FPE** 📢  
+
+Bonjour à tous,  
+
+Bienvenue dans cette **initiation au FPE** à travers le projet **Paiement-Institus** ! Ce programme a pour objectif de vous familiariser avec les concepts fondamentaux du développement logiciel et de la gestion des paiements dans les institutions.  
+
+✅ **Ce que vous allez apprendre** :  
+- Les bases du **développement en Delphi/Pascal**.  
+- L'utilisation de **PostgreSQL** pour gérer les bases de données.  
+- Le fonctionnement des systèmes de **gestion des paiements**.  
+- L'usage de **Git** pour le suivi et la gestion des versions du projet.  
+
+💡 **Conseils pour une bonne initiation** :  
+- Prenez le temps d'explorer le projet et de comprendre son architecture.  
+- Posez des questions, l’apprentissage passe par l’échange !  
+- Expérimentez avec le code, testez et analysez les résultats.  
+
+🚀 **Prochaine étape** : Installation de l’environnement de développement et première prise en main du projet.  
+
+Bonne initiation à tous ! 💪🔥  
+
+Cordialement,  
+[Votre Nom]
 
 **Description :**
-Système de paiement en ligne destiné aux institutions éducatives, facilitant les transactions sécurisées pour les étudiants et le personnel.
+Système de paiement en ligne destiné aux institutions éducatives, facilitant les transactions sécurisées pour les étudiants et le personnel surtout Mes Cher Stagiaires IPCIG-EP.
 
 ## Fonctionnalités
 
