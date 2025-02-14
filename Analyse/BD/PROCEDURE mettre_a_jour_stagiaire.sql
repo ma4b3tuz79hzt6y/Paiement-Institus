@@ -6,7 +6,7 @@ CREATE PROCEDURE mettre_a_jour_stagiaire(
     IN p_prenom VARCHAR(255),
     IN p_email VARCHAR(255),
     IN p_telephone VARCHAR(20),
-    OUT p_success  VARCHAR(4),
+    OUT p_success  VARCHAR(200),
     OUT p_message VARCHAR(200)  
 )
 BEGIN
@@ -15,13 +15,13 @@ proc:BEGIN
     
     If (p_nom = '' OR p_prenom ='') THEN
         SET p_message = 'Nom  et Prenom obligatoire';
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         LEAVE proc;
     END IF; 
     
     If (p_email = '' OR p_telephone ='') THEN
         SET p_message = 'Telephone  et Email obligatoire';
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         LEAVE proc;
     END IF; 
     
@@ -32,9 +32,10 @@ proc:BEGIN
     
     IF v_exist = 0 THEN
         SET p_message = 'Le stagiaire n\'existe pas.';
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         LEAVE proc;
     END IF;
+    
     
     -- Vérifier si l'email existe déjà pour un autre stagiaire
     SELECT COUNT(*) INTO v_exist
@@ -43,9 +44,10 @@ proc:BEGIN
     
     IF v_exist > 0 THEN
         SET p_message = 'L\'email existe déjà pour un autre stagiaire.';
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         LEAVE proc;
     END IF;
+    
     
     -- Mettre à jour le stagiaire
     UPDATE paiement_institus.stagiaires
@@ -57,7 +59,7 @@ proc:BEGIN
     
     -- Retourner un message de succès
     SET p_message = 'Les informations du stagiaire ont été mises à jour avec succès.';
-    SET p_success = TRUE ;
+    SET p_success = 'TRUE' ;
 END;    
 END $$
 

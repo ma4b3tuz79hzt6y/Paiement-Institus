@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Server_Ecole.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="24" Y="18"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="124"/>
+        <CursorPos Y="126"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Routers/Router.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="38" Y="17"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DataModule"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="95"/>
+        <CursorPos X="38" Y="144"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Datamodule/DataModule.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="20" Y="6"/>
+        <UsageCount Value="19"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="13" Column="32" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="17" Column="20" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="78" Column="20" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="72" Column="24" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="78" Column="21" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="20" Column="68" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="61" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="2" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="66" Column="5" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="11" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="28" Column="44" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="21" Column="47" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="10" Column="29"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="101" Column="59" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="99" Column="60" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="21" Column="116" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="130" Column="25" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="129" Column="55" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="132" Column="37" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="53" Column="48" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="84" Column="28" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="11" Column="80"/>
+      </Position>
+      <Position>
+        <Filename Value="Datamodule/datamodule.pas"/>
+        <Caret Line="22" Column="35" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="134" Column="35" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="146" Column="2" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="Routers/Router.pas"/>
+        <Caret Line="17" Column="44" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="123" Column="51" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="Controllers/StagiaireController.pas"/>
+        <Caret Line="114" Column="12" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="Server_Ecole.lpr"/>
+        <Caret Line="6" Column="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Server_Ecole.lpr"/>
+        <Caret Line="18" Column="29" TopLine="2"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

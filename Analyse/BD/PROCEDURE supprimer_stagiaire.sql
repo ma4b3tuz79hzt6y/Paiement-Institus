@@ -2,11 +2,12 @@ DELIMITER $$
 
 CREATE PROCEDURE supprimer_stagiaire(
     IN p_stagiaire_id INT UNSIGNED ,
-    OUT p_success  VARCHAR(4),
-    OUT p_message VARCHAR(200) 
+    
+    OUT p_message VARCHAR(200) ,
+    OUT p_success  VARCHAR(200)
 )
 BEGIN
-proc:BEGIN
+
     DECLARE v_exist INT;
     
    SET p_stagiaire_id = IFNULL(p_stagiaire_id, 0);
@@ -17,20 +18,15 @@ proc:BEGIN
     WHERE stagiaire_id = p_stagiaire_id;
    
     
-    IF v_exist > 0 THEN
-        SET p_success = FALSE;
-        SET p_message = 'Le stagiaire possède déjà une inscription  La suppression est refusée.';
-        LEAVE proc;
-    END IF;
-    
-    -- Si aucune inscription n'est trouvée, supprimer le stagiaire
-    DELETE FROM paiement_institus.stagiaires
-     WHERE id = p_stagiaire_id;
-    
-    -- Retourner un message de succès
+ IF v_exist > 0 THEN
+    SET p_success = 'FALSE';
+    SET p_message = 'Le stagiaire possède déjà une inscription  La suppression est refusée.';
+ELSE
+    DELETE FROM paiement_institus.stagiaires WHERE id = p_stagiaire_id;
+    SET p_success = 'TRUE';
     SET p_message = 'Le stagiaire a été supprimé avec succès.';
-    SET p_success = FALSE;
-END;    
+END IF;
+   
 END $$
 
 DELIMITER ;

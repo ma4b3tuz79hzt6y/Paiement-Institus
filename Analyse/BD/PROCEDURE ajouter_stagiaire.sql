@@ -6,7 +6,7 @@ CREATE PROCEDURE ajouter_stagiaire(
     IN p_email VARCHAR(255),
     IN p_telephone VARCHAR(20),
     OUT p_message VARCHAR(200),
-    OUT p_success  VARCHAR(4)
+    OUT p_success  VARCHAR(200)
 )
 proc:BEGIN
   BEGIN
@@ -15,13 +15,13 @@ proc:BEGIN
     
     If (p_nom = '' OR p_prenom ='') THEN
         SET p_message = 'Nom  et Prenom obligatoire';
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         LEAVE proc;
     END IF; 
     
     If (p_email = '' OR p_telephone ='') THEN
         SET p_message = 'Telephone  et Email obligatoire';
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         LEAVE proc;
     END IF; 
     
@@ -32,8 +32,9 @@ proc:BEGIN
     WHERE (email = p_email OR telephone = p_telephone);
     
     IF v_exist > 0 THEN
-        SET p_success = FALSE;
+        SET p_success = 'FALSE';
         SET p_message = 'Le stagiaire existe déjà avec cet email ou téléphone.';
+        LEAVE proc;
     ELSE
     
    -- Ajouter le stagiaire
@@ -42,7 +43,8 @@ proc:BEGIN
     
    -- Si tout se passe bien, renvoyer un message de succès
      SET p_message = 'Stagiaire et inscription ajoutés avec succès.';
-     SET p_success = TRUE;
+     SET p_success = 'TRUE';
+
    
    END IF;
  END;   
