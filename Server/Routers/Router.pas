@@ -3,7 +3,7 @@ unit Router;
 interface
 
 uses
-  Horse, StagiaireController;
+  Horse, StagiaireController,FiliereController;
 
 procedure RegisterRoutes;
 
@@ -12,9 +12,13 @@ implementation
 procedure RegisterRoutes;
 begin
   // Route pour ajouter un stagiaire
-  THorse.Post('/ajouter_stagiaire', AjouterStagiaireController);
-  THorse.Post('/modifier_stagiaire', MiseAjourStagiaireController);
-  THorse.Delete('/supprimer_stagiaire/:id', SuprimerStagiaireController);
+  THorse.Post('/stagiaire', AjouterStagiaireController);
+  THorse.Put('/stagiaire', MiseAjourStagiaireController);
+  THorse.Delete('/stagiaire/:id', SuprimerStagiaireController);
+
+  THorse.Post('/filiere', AjouterFiliereController);
+  THorse.Put('/filiere', MiseAjourFiliereController);
+  THorse.Delete('/filiere/:id', SuprimerSFiliereController);
 end;
 
 end.

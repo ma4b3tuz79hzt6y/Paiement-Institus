@@ -55,6 +55,11 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="DataModule"/>
       </Unit>
+      <Unit>
+        <Filename Value="Controllers/filierecontroller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FiliereController"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -67,6 +72,11 @@
       <OtherUnitFiles Value="Controllers;Routers;..\modules/.dcp;..\modules/.dcu;..\modules;..\modules/horse/src;Datamodule;modules/.dcp;modules/.dcu;modules;modules/horse/src;modules/jhonson/src;..\modules/jhonson/src"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
   </CompilerOptions>
   <Debugging>
     <Exceptions>
