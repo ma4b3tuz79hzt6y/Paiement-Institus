@@ -7,6 +7,7 @@ CREATE PROCEDURE supprimer_stagiaire(
 )
 BEGIN
 proc:BEGIN
+
     DECLARE v_exist INT;
     DECLARE EXIT HANDLER FOR SQLEXCEPTION 
     BEGIN
