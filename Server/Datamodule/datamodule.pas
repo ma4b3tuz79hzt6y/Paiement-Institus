@@ -33,7 +33,7 @@ function TDM.GetConnection: TZConnection;
 begin
   if not Assigned(FConnection) then
   begin
-    FConnection := TZConnection.Create(nil);
+    //FConnection := TZConnection.Create(nil);
     FConnection.HostName := 'localhost'; // Modifier selon votre configuration
     FConnection.Database := 'paiement_institus';
     FConnection.User := 'root'; // Modifier selon votre configuration
@@ -89,7 +89,7 @@ end;
 procedure TDM.DataModuleCreate(Sender: TObject);
 begin
   //
- // GetConnection;
+ GetConnection;
 end;
 
 procedure TDM.MiseAjourStagiaire(ID, Nom, Prenom, Email, Telephone: string;

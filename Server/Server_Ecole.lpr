@@ -6,6 +6,7 @@ uses
 procedure Runing(horse:thorse);
     begin
       WriteLn('Server running on port: 9000');
+
     end;
 begin
     // Initialisation du DataModule
@@ -15,6 +16,8 @@ begin
     // Démarrer le serveur Horse
     //THorse.OnListen := @Runing;
     // Pour Linux, assurez-vous d'utiliser un port non réservé comme 8080
-   THorse.Listen(9000,@Runing); // Le serveur écoute sur le port 9000
+   THorse.Listen(9000,@Runing);
+   // Le serveur écoute sur le port 9000
+
 end.
 

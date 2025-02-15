@@ -10,7 +10,6 @@ object DM: TDM
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
-    Connected = True
     DisableSavepoints = False
     HostName = 'localhost'
     Port = 0
