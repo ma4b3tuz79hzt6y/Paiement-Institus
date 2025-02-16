@@ -34,7 +34,10 @@ begin
     Telephone := JSONData.FindPath('telephone').AsString;
 
     // Appel à la méthode du DataModule
-    DM.AjouterStagiaire(Nom, Prenom, Email, Telephone, Message, Success);
+    //DM.AjouterStagiaire(Nom, Prenom, Email, Telephone, Message, Success);
+DM.AjouterEntity('ajouter_stagiaire', ['nom', Nom, 'Prenom',Prenom,'Email',Email,'Telephone', Telephone], Message, Success);
+
+
 
      // Créer la réponse JSON avec fpjson
     JsonResponse := TJSONObject.Create;
@@ -84,7 +87,8 @@ begin
     Telephone := JSONData.FindPath('telephone').AsString;
 
     // Appel à la méthode du DataModule
-    DM.MiseAjourStagiaire(id,Nom, Prenom, Email, Telephone, Message, Success);
+    //DM.MiseAjourStagiaire(id,Nom, Prenom, Email, Telephone, Message, Success);
+     DM.MiseAjourEntity('mettre_a_jour_stagiaire',  ['id',ID,'nom', Nom, 'prenom', Prenom, 'email', Email, 'telephone', Telephone], Message, Success);
 
     // Créer la réponse JSON avec fpjson
     JsonResponse := TJSONObject.Create;
@@ -122,7 +126,8 @@ begin
     // Récupérer le corps de la requête sous forme de chaîne de caractères
     id := Request.Params['id'];
     // Appel à la méthode du DataModule
-    DM.SuprimerStagiaire(id, Message, Success);
+    //DM.SuprimerStagiaire(id, Message, Success);
+      DM.SupprimerEntity('supprimer_stagiaire', ID, Message, Success);
 
     // Créer la réponse JSON avec fpjson
     JsonResponse := TJSONObject.Create;

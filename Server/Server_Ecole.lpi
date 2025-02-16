@@ -60,6 +60,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="FiliereController"/>
       </Unit>
+      <Unit>
+        <Filename Value="Datamodule/uoutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Uoutils"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

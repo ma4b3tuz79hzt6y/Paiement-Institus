@@ -33,7 +33,8 @@ begin
 
 
     // Appel à la méthode du DataModule
-    DM.AjouterFiliere(Nom,fin_incription, Message, Success);
+   // DM.AjouterFiliere(Nom,fin_incription, Message, Success);
+    DM.AjouterEntity('AjouterFiliere', ['nom', Nom, 'fin_inscription', fin_incription], Message, Success);
 
      // Créer la réponse JSON avec fpjson
     JsonResponse := TJSONObject.Create;
@@ -80,7 +81,8 @@ begin
     fin_incription :=JSONData.FindPath('fin_incription').AsString;
 
     // Appel à la méthode du DataModule
-    DM.MiseAjourFiliere(id,Nom, fin_incription, Message, Success);
+    //DM.MiseAjourFiliere(id,Nom, fin_incription, Message, Success);
+     DM.MiseAjourEntity('ModifierFiliere',  ['id',ID,'nom', Nom, 'fin_incription', fin_incription], Message, Success);
 
     // Créer la réponse JSON avec fpjson
     JsonResponse := TJSONObject.Create;
@@ -118,7 +120,8 @@ begin
     // Récupérer le corps de la requête sous forme de chaîne de caractères
     id := Request.Params['id'];
     // Appel à la méthode du DataModule
-    DM.SuprimerFilier(id, Message, Success);
+    //DM.SuprimerFilier(id, Message, Success);
+     DM.SupprimerEntity('SupprimerFiliere', ID, Message, Success);
 
     // Créer la réponse JSON avec fpjson
     JsonResponse := TJSONObject.Create;

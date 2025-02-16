@@ -12,6 +12,13 @@ CREATE PROCEDURE mettre_a_jour_stagiaire(
 BEGIN
 proc:BEGIN
     DECLARE v_exist INT;
+     -- Gestion des erreurs avec un gestionnaire
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION 
+    BEGIN
+        ROLLBACK;
+        SET p_success = FALSE;
+        SET p_message = 'Une erreur est survenue lors de la mise ajour';
+    END;
     
     If (p_nom = '' OR p_prenom ='') THEN
         SET p_message = 'Nom  et Prenom obligatoire';

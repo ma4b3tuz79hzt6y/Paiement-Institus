@@ -10,6 +10,14 @@ CREATE PROCEDURE ajouter_stagiaire(
 )
 proc:BEGIN
   BEGIN
+   -- Gestion des erreurs avec un gestionnaire
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION 
+    BEGIN
+        ROLLBACK;
+        SET p_success = FALSE;
+        SET p_message = 'Une erreur est survenue lors de l\'Ajout';
+    END;
+    
     DECLARE v_stagiaire_id INT;
     DECLARE v_exist INT;
     
