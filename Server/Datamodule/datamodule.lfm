@@ -1,0 +1,23 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 443
+  VerticalOffset = 291
+  Width = 150
+  object FConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 0
+    Database = 'paiement_institus'
+    User = 'root'
+    Password = '12345678'
+    Protocol = 'mysql'
+    Left = 60
+    Top = 52
+  end
+end

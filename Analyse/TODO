@@ -1,0 +1,43 @@
+**WEBSERVICE HORSE
+
+1/creer les routes/controllers/procedure Datamodule pour gestion des annees scolaires
+-------------------------------------------------------------------------------------
+2/Modifier les ptocdures stockees de gestion des inscriptions  (en cours)
+3/Cerer les procedure stockees de gestion et generation des echeances
+4/Cerer les procedure stockees de gestion et generation des Paiements
+------------------------------------------------------------------------------------
+
+
+//les echances du jour non hnores
+//les xcheances du mois non hanores
+// tous les echances non honnree
+
+//suivie des paiement et echeance/stagaiar/
+//suivie des paiement et echeance/stagaiare/
+///suivie des paiement et echeance/filiere/
+//suivie des paiement et echeance/trimetre/
+
+// caisse du jour : entree /sortie(depenses)/solde par jour
+
+
+
+
+**Gestion desktop
+//Paiement
+//echances
+//caisse
+//Inscription
+//edition des documents de paiement
+//suivi des alert endicateurs et tableau de bord
+**Gestion mobile
+  version parent
+//suivioe des paiements par les parent
+//message authentification des retard et paiements
+  version admin
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+CREATE PROCEDURE AjouterInscription(
+    IN p_date_inscription DATE,
+    IN p_nombre_echeance INT,
+    IN p_filiere_id INT,
+    IN p_annee_id INT,
+    IN p_stagiaire_id INT,
+    OUT message VARCHAR(255),
+    OUT success VARCHAR(10)
+    
+)
+BEGIN
+    DECLARE v_count INT;
+    
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        
+        SET message = 'Erreur lors de l\'ajout de l\'inscription. Vérifiez les contraintes d\'intégrité';
+        SET success = 'FALSE';
+    END;
+    
+    -- Vérifier si le stagiaire est déjà inscrit pour cette année scolaire
+    SELECT COUNT(*) INTO v_count 
+    FROM inscriptions 
+    WHERE annee_id = p_annee_id AND stagiaire_id = p_stagiaire_id;
+    
+    IF v_count > 0 THEN
+       
+       SET message = 'Le stagiaire est déjà inscrit pour cette année scolaire';
+       SET success = 'FALSE';   
+    ELSE
+        START TRANSACTION;
+        INSERT INTO inscriptions (date_inscription, nombre_echeance, filiere_id, annee_id, stagiaire_id)
+        VALUES (COALESCE(p_date_inscription, CURRENT_DATE), p_nombre_echeance, p_filiere_id, p_annee_id, p_stagiaire_id);
+        
+         SET message = 'Inscription ajoutée avec succès';
+         SET success = 'TRUE';
+        COMMIT;
+       
+    END IF;
+END $$
+
+DELIMITER ;
+
