@@ -3,4 +3,11 @@ Server/lib/
 Server/modules/
 Server/old/
 Server_Ecole.exe
-*.old
+Server/*.old
+Server/*.bak
+Server/*.ppu
+Server/*.o
+Server/*.compiled
+Server/backup/
+lib/
+
